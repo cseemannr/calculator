@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light-mode">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <!-- <div class="mode-btn"><div class="on-off-btn"></div></div> -->
+    <div class="mode-btn"><input type="checkbox" /></div>
+    <div class="calculator" data-memory="" data-unit="degrees">
+      <div class="display">0</div>
+      <div class="rad-text">Rad</div>
+      <div class="keys">
+        <!--ROW 1-->
+        <button data-type="parenthesis" data-action="left-paren">(</button>
+        <button data-type="parenthesis" data-action="right-paren">)</button>
+        <button data-type="memory" data-action="mclear">mc</button>
+        <button data-type="memory" data-action="mplus">m+</button>
+        <button data-type="memory" data-action="mminus">m-</button>
+        <button data-type="memory" data-action="mrecall">mr</button>
+        <!---->
+        <button data-type="clear">AC</button>
+        <button data-type="operator" data-action="plus-minus">+/-</button>
+        <button data-type="percentage" data-action="percentage">%</button>
+        <button data-type="operator" data-action="divide" class="bg-accent-operator">
+          ÷
+        </button>
+        <!--ROW 2-->
+        <button data-type="2nd" data-action="2nd">2&#8319; &#873;</button>
+        <button data-type="operator" data-action="pow-2">x²</button>
+        <button data-type="operator" data-action="pow-3">x³</button>
+        <button data-type="operator" data-action="x-pow-y">
+          x
+          <span class="small-letter small-margin-bottom">y</span>
+        </button>
+        <button data-type="operator" data-action="ex">
+          e
+          <span class="small-letter small-margin-bottom">x</span>
+        </button>
+        <button class="secondBtn" data-type="operator" data-action="y-pow-x">
+          y
+          <span class="small-letter small-margin-bottom">x</span>
+        </button>
+        <button data-type="operator" data-action="10-pow-x">
+          10
+          <span class="small-letter small-margin-bottom">x</span>
+        </button>
+        <button class="secondBtn" data-type="operator" data-action="2-pow-x">
+          2
+          <span class="small-letter small-margin-bottom">x</span>
+        </button>
+        <!---->
+        <button class="seven" data-type="number">7</button>
+        <button class="eight" data-type="number">8</button>
+        <button class="nine" data-type="number">9</button>
+        <button data-type="operator" data-action="multiply" class="bg-accent-operator">
+          &times;
+        </button>
+
+        <!--ROW 3-->
+        <button data-type="operator" data-action="1-x">&#185;/&#8339;</button>
+        <button data-type="operator" data-action="sqrt-x">
+          ²&#8730;&#8339;
+        </button>
+        <button data-type="operator" data-action="cbrt-x">
+          ³&#8730;&#8339;
+        </button>
+        <button data-type="operator" data-action="y-root-x">
+          <span class="small-letter margin-right big-margin-bottom">y</span
+          >&#8730;&#8339;
+        </button>
+        <button data-type="operator" data-action="in">In</button>
+        <button class="secondBtn" data-type="operator" data-action="logy">
+          log<span class="small-letter negative-margin-bottom">y</span>
+        </button>
+        <button data-type="operator" data-action="log10">
+          log<span class="small-letter negative-margin-bottom">10</span>
+        </button>
+        <button class="secondBtn" data-type="operator" data-action="log2">
+          log<span class="small-letter negative-margin-bottom">2</span>
+        </button>
+        <!---->
+        <button class="four" data-type="number">4</button>
+        <button class="five" data-type="number">5</button>
+        <button class="six" data-type="number">6</button>
+        <button data-type="operator" data-action="subtract" class="bg-accent-operator">
+          -
+        </button>
+
+        <!--ROW 4-->
+        <button data-type="operator" data-action="factorial">x!</button>
+        <button data-type="operator" data-action="sin">sin</button>
+        <button class="secondBtn" data-type="operator" data-action="sin-1">
+          sin<samp class="small-letter small-margin-bottom">-1</samp>
+        </button>
+        <button data-type="operator" data-action="cos">cos</button>
+        <button class="secondBtn" data-type="operator" data-action="cos-1">
+          cos<samp class="small-letter small-margin-bottom">-1</samp>
+        </button>
+        <button data-type="operator" data-action="tan">tan</button>
+        <button class="secondBtn" data-type="operator" data-action="tan-1">
+          tan<samp class="small-letter small-margin-bottom">-1</samp>
+        </button>
+        <button data-type="operator" data-action="e">e</button>
+        <button data-type="operator" data-action="ee">EE</button>
+        <!---->
+        <button class="one" data-type="number">1</button>
+        <button class="two" data-type="number">2</button>
+        <button class="three" data-type="number">3</button>
+        <button data-type="operator" data-action="add" class="bg-accent-operator">
+          +
+        </button>
+
+        <!--row5-->
+        <button data-type="rad-deg" data-action="rad-deg">Rad</button>
+        <button data-type="operator" data-action="sinh">sinh</button>
+        <button class="secondBtn" data-type="operator" data-action="sinh-1">
+          sinh<samp class="small-letter small-margin-bottom">-1</samp>
+        </button>
+        </button>
+        <button data-type="operator" data-action="cosh">cosh</button>
+        <button class="secondBtn" data-type="operator" data-action="cosh-1">
+          cosh<samp class="small-letter small-margin-bottom">-1</samp>
+        </button>
+        </button>
+        <button data-type="operator" data-action="tanh">tanh</button>
+        <button class="secondBtn" data-type="operator" data-action="tanh-1">
+          tanh<samp class="small-letter small-margin-bottom">-1</samp>
+        </button>
+        </button>
+        <button data-type="operator" data-action="pi">&#960;</button>
+        <button data-type="operator" data-action="random">Rand</button>
+        <button class="span2 zero" data-type="number">0</button>
+        <button data-type="decimal">.</button>
+        <button data-type="equal" class="bg-accent-operator">=</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
